@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi.health-clinic.manha</name>
+    </assembly>
+    <members>
+        <member name="T:webapi.health_clinic.manha.Migrations.BD2">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BD2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BD2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BD2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:webapi.health_clinic.manha.Migrations.Marchetti">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Marchetti.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Marchetti.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Marchetti.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
