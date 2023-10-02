@@ -60,6 +60,8 @@ namespace webapi.health_clinic.manha.Repository
 
         public void Cadastrar(Médico médico)
         {
+            médico.idMedico = Guid.NewGuid();
+
             _eventContext.Add(médico);
             _eventContext.SaveChanges();
         }

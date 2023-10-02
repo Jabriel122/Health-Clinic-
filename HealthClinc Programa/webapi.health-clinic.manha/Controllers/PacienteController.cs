@@ -73,6 +73,20 @@ namespace webapi.health_clinic.manha.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetId(Guid id)
+        {
+            try
+            {
+
+                return Ok(_pacienteRepository.BuscaPorId(id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
         
 
     }
