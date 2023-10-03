@@ -22,7 +22,7 @@ namespace webapi.health_clinic.manha.Domains
 
         [ForeignKey(nameof(IdConsulta))]
 
-        public Consulta Consulta { get; set; }
+        public Consulta? Consulta { get; set; }
 
     }
 }

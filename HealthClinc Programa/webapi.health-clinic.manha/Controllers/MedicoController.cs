@@ -21,16 +21,14 @@ namespace webapi.health_clinic.manha.Controllers
 
         [HttpPost]
 
-        public IActionResult Post(Médico médico)
+        public IActionResult Post(Medico medico)
         {
             try
             {
-                if (médico != null)
-                {
-                    _medicoRepository.Cadastrar(médico);
-                    return StatusCode(201);
-                }
-                return Ok("Médico não foi inserido corretamente");
+               
+                _medicoRepository.Cadastrar(medico);
+                return StatusCode(201);
+                
             }
             
             catch (Exception ex)
@@ -68,11 +66,11 @@ namespace webapi.health_clinic.manha.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(Médico médico, Guid id)
+        public IActionResult Put(Medico medico, Guid id)
         {
             try
             {
-                _medicoRepository.Atualizar(id, médico);
+                _medicoRepository.Atualizar(id, medico);
                 return StatusCode(201);
             }
             catch(Exception ex)

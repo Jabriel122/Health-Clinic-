@@ -13,29 +13,29 @@ namespace webapi.health_clinic.manha.Repository
             _eventContext = new EventContext();
         }
 
-        public void Atulaizar(Guid id, Clínica clínica)
+        public void Atulaizar(Guid id, Clinica clinica)
         {
-            Clínica clinicBuscar = _eventContext.Clinica.Find(id)!;
+            Clinica clinicBuscar = _eventContext.Clinica.Find(id)!;
 
             if (clinicBuscar != null)
             {
-                clinicBuscar.NomeFantasia = clínica.NomeFantasia;
-                clinicBuscar.Endereco = clínica.Endereco;
-                clinicBuscar.CNPJ = clínica.CNPJ;
-                clinicBuscar.RazaoSocial = clínica.RazaoSocial;
-                clinicBuscar.HorarioAbertura = clínica.HorarioAbertura;
-                clinicBuscar.HorarioFechamento = clínica.HorarioFechamento;
+                clinicBuscar.NomeFantasia = clinica.NomeFantasia;
+                clinicBuscar.Endereco = clinica.Endereco;
+                clinicBuscar.CNPJ = clinica.CNPJ;
+                clinicBuscar.RazaoSocial = clinica.RazaoSocial;
+                clinicBuscar.HorarioAbertura = clinica.HorarioAbertura;
+                clinicBuscar.HorarioFechamento = clinica.HorarioFechamento;
 
             }
             _eventContext.Clinica.Update(clinicBuscar);
             _eventContext.SaveChanges();
         }
 
-        public Clínica BuscarPorId(Guid id)
+        public Clinica BuscarPorId(Guid id)
         {
             try
             {
-                Clínica clinicaBuscar = _eventContext.Clinica.Select(u => new Clínica
+                Clinica clinicaBuscar = _eventContext.Clinica.Select(u => new Clinica
                 {
                     IdClinica = u.IdClinica,
                     NomeFantasia = u.NomeFantasia,
@@ -61,7 +61,7 @@ namespace webapi.health_clinic.manha.Repository
 
         }
 
-        public void Cadastar(Clínica clínica)
+        public void Cadastar(Clinica clínica)
         {
             _eventContext.Clinica.Add(clínica);
             _eventContext.SaveChanges();
@@ -69,14 +69,14 @@ namespace webapi.health_clinic.manha.Repository
 
         public void Deletar(Guid id)
         {
-            Clínica clinicaBuscar = _eventContext.Clinica.Find(id);
+            Clinica clinicaBuscar = _eventContext.Clinica.Find(id);
             _eventContext.Clinica.Remove(clinicaBuscar);
             _eventContext.SaveChanges();
         }
 
-        public List<Clínica> Listar()
+        public List<Clinica> Listar()
         {
             return _eventContext.Clinica.ToList();
-        }
+        } 
     }
 }

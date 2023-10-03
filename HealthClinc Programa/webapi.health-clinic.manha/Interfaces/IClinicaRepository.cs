@@ -4,15 +4,15 @@ namespace webapi.health_clinic.manha.Interfaces
 {
     public interface  IClinicaRepository
     {
-        void Cadastar(Clínica clínica);
+        void Cadastar(Clinica clínica);
 
         void Deletar(Guid id);
 
-        void Atulaizar(Guid id, Clínica clínica);
+        void Atulaizar(Guid id, Clinica clínica);
 
-        List<Clínica> Listar();
+        List<Clinica> Listar();
 
 
-        Clínica BuscarPorId(Guid id);
+        Clinica BuscarPorId(Guid id);
     }
 }

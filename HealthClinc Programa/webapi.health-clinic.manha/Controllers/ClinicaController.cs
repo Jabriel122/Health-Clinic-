@@ -61,11 +61,11 @@ namespace webapi.health_clinic.manha.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar (Clínica clínica)
+        public IActionResult Cadastrar (Clinica clinica)
         {
             try
             {
-                _clinicaRepository.Cadastar(clínica);
+                _clinicaRepository.Cadastar(clinica);
                 return StatusCode(201);
             }
             catch (Exception ex)
@@ -75,11 +75,11 @@ namespace webapi.health_clinic.manha.Controllers
         }
 
         [HttpPut]
-        public IActionResult Atualizar(Guid id, Clínica clínica)
+        public IActionResult Atualizar(Guid id, Clinica clinica)
         {
             try
             {
-                _clinicaRepository.Atulaizar(id, clínica);
+                _clinicaRepository.Atulaizar(id, clinica);
                 return StatusCode(201) ;
             }
             catch(Exception e)

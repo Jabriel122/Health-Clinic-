@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webapi.health_clinic.manha.Domains
 {
-    [Table(nameof(Clínica))]
-    public class Clínica
+    [Table(nameof(Clinica))]
+    public class Clinica
     {
         [Key]
         public Guid IdClinica { get; set; } =

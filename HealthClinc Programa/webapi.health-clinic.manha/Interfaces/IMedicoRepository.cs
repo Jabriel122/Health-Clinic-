@@ -4,16 +4,16 @@ namespace webapi.health_clinic.manha.Interfaces
 {
     public interface IMedicoRepository
     {
-        void Cadastrar(Médico médico);
+        void Cadastrar(Medico medico);
 
         void Deletar(Guid id);
 
-        void Atualizar (Guid id, Médico médico);
+        void Atualizar (Guid id, Medico medico);
 
-        List<Médico> Listar();
+        List<Medico> Listar();
 
-        Médico BuscarPorId (Guid id);
+        Medico BuscarPorId (Guid id);
 
-        Médico BuscarPorEspecialidade (Guid id, Médico médico);
+        Medico BuscarPorEspecialidade (Guid id, Medico medico);
     }
 }

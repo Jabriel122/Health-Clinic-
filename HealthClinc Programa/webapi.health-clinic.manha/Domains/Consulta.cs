@@ -24,7 +24,7 @@ namespace webapi.health_clinic.manha.Domains
 
         [ForeignKey(nameof(IdMedico))]
 
-        public Médico medico { get; set; }
+        public Medico? medico { get; set; }
 
         //ForeignKey - Paciente
 
@@ -32,7 +32,7 @@ namespace webapi.health_clinic.manha.Domains
 
         [ForeignKey(nameof(IdPaciente))]
 
-        public Paciente paciente { get; set; }
+        public Paciente? paciente { get; set; }
         
     }
 }

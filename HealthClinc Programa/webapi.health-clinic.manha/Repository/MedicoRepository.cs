@@ -12,39 +12,39 @@ namespace webapi.health_clinic.manha.Repository
         {
             _eventContext = new EventContext();
         }
-        public void Atualizar(Guid id, Médico médico)
+        public void Atualizar(Guid id, Medico medico)
         {
-            Médico medicoBuscar = _eventContext.Médico.Find(id)!;
+            Medico medicoBuscar = _eventContext.Medico.Find(id)!;  
 
             if (medicoBuscar != null)
             {
-                medicoBuscar.CRM = médico.CRM;
-                medicoBuscar.IdClinica = médico.IdClinica;
-                medicoBuscar.IdEspecialidade = médico.IdEspecialidade;
-                medicoBuscar.IdUsuario = médico.IdUsuario;
+                medicoBuscar.CRM = medico.CRM;
+                medicoBuscar.IdClinica = medico.IdClinica;
+                medicoBuscar.IdEspecialidade = medico.IdEspecialidade;
+                medicoBuscar.IdUsuario = medico.IdUsuario;
             }
-            _eventContext.Médico.Update(medicoBuscar);
+            _eventContext.Medico.Update(medicoBuscar);
             _eventContext.SaveChanges();
         }
 
-        public Médico BuscarPorEspecialidade(Guid id, Médico médico)
+        public Medico BuscarPorEspecialidade(Guid id, Medico medico)
         {
             throw new NotImplementedException();
         }
 
-        public Médico BuscarPorId(Guid id)
+        public Medico BuscarPorId(Guid id)
         {
             try
             {
-                Médico medicoBuscar = _eventContext.Médico.Select(u => new Médico
+                Medico medicoBuscar = _eventContext.Medico.Select(u => new Medico
                 {
-                    idMedico = u.idMedico,
+                    IdMedico = u.IdMedico,
                     CRM = u.CRM,
                     IdEspecialidade = u.IdEspecialidade,
                     IdClinica = u.IdClinica,
                     IdUsuario = u.IdUsuario
 
-                }).FirstOrDefault(u => u.idMedico == id)!;
+                }).FirstOrDefault(u => u.IdMedico == id)!;
 
                 if (medicoBuscar  != null)
                 {
@@ -58,25 +58,23 @@ namespace webapi.health_clinic.manha.Repository
             }
         }
 
-        public void Cadastrar(Médico médico)
+        public void Cadastrar(Medico medico)
         {
-            médico.idMedico = Guid.NewGuid();
-
-            _eventContext.Add(médico);
+            _eventContext.Medico.Add(medico);
             _eventContext.SaveChanges();
         }
 
         public void Deletar(Guid id)
         {
-            Médico medicoBuscar = _eventContext.Médico.Find(id);
+            Medico medicoBuscar = _eventContext.Medico.Find(id);
 
-            _eventContext.Remove(medicoBuscar);
+            _eventContext.Medico.Remove(medicoBuscar);
             _eventContext.SaveChanges();
         }
 
-        public List<Médico> Listar()
+        public List<Medico> Listar()
         {
-            return _eventContext.Médico.ToList();
-        }
+            return _eventContext.Medico.ToList();
+        } 
     }
 }

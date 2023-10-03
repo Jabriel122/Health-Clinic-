@@ -28,5 +28,41 @@
         <member name="M:webapi.health_clinic.manha.Migrations.Marchetti.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:webapi.health_clinic.manha.Migrations.BDHealthClinic3">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BDHealthClinic3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BDHealthClinic3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.BDHealthClinic3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:webapi.health_clinic.manha.Migrations.DB4">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.DB4.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.DB4.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.DB4.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:webapi.health_clinic.manha.Migrations.Db5">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Db5.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Db5.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.manha.Migrations.Db5.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
