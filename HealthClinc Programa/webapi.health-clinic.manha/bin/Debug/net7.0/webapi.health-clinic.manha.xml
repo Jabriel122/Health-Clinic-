@@ -4,6 +4,251 @@
         <name>webapi.health-clinic.manha</name>
     </assembly>
     <members>
+        <member name="M:webapi.health_clinic.manha.Controllers.ClinicaController.Cadastrar(webapi.health_clinic.manha.Domains.Clinica)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ClinicaController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ClinicaController.GetId(System.Guid)">
+            <summary>
+            Endpoint de Listar por Id
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ClinicaController.Deletar(System.Guid)">
+            <summary>
+            Endpoint de deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ClinicaController.Atualizar(System.Guid,webapi.health_clinic.manha.Domains.Clinica)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ComentarioConsultaController.Post(webapi.health_clinic.manha.Domains.ComentarioConsulta)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ComentarioConsultaController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ComentarioConsultaController.Delete(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ComentarioConsultaController.Put(webapi.health_clinic.manha.Domains.ComentarioConsulta,System.Guid)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.Post(webapi.health_clinic.manha.Domains.Consulta)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.Delete(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.Put(webapi.health_clinic.manha.Domains.Consulta,System.Guid)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.GetIdMEdico(System.Guid)">
+            <summary>
+            Endpoint de Listar por Id de Medico
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.ConsultaController.GetPaciente(System.Guid)">
+            <summary>
+            Endpoint de Listar por Id de Paciente
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.EspecialidadeController.Post(webapi.health_clinic.manha.Domains.Especialidades)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.EspecialidadeController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.EspecialidadeController.Delete(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.LoginController.Post(webapi.health_clinic.manha.ViewModel.LoginViewModel)">
+            <summary>
+            Endpoint para Logar e gerar token
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.MedicoController.Post(webapi.health_clinic.manha.Domains.Medico)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.MedicoController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.MedicoController.GetId(System.Guid)">
+            <summary>
+            Endpoint de Listar por id
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.MedicoController.Put(webapi.health_clinic.manha.Domains.Medico,System.Guid)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.PacienteController.Post(webapi.health_clinic.manha.Domains.Paciente)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.PacienteController.Delete(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.PacienteController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.PacienteController.Put(System.Guid,webapi.health_clinic.manha.Domains.Paciente)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.PacienteController.GetId(System.Guid)">
+            <summary>
+            Endpoint de Listar por Id
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.TiposUsuarioController.Post(webapi.health_clinic.manha.Domains.TiposDeUsuario)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.TiposUsuarioController.Delete(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.TiposUsuarioController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.UsuarioController.Post(webapi.health_clinic.manha.Domains.Usuario)">
+            <summary>
+            Endpoint de Cadastro
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.UsuarioController.Deletar(System.Guid)">
+            <summary>
+            Endpoint de Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.UsuarioController.Get">
+            <summary>
+            Endpoint de Listar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.manha.Controllers.UsuarioController.Put(webapi.health_clinic.manha.Domains.Usuario,System.Guid)">
+            <summary>
+            Endpoint de Atualizar
+            </summary>
+            <param name="usuario"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:webapi.health_clinic.manha.Migrations.BD2">
             <inheritdoc />
         </member>

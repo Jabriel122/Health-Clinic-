@@ -22,6 +22,13 @@ namespace webapi.health_clinic.manha.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+
+
+        /// <summary>
+        /// Endpoint para Logar e gerar token
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
 
         public IActionResult Post (LoginViewModel usuario)

@@ -18,6 +18,33 @@ namespace webapi.health_clinic.manha.Controllers
             _clinicaRepository = new ClinicaRepository();
         }
 
+
+
+        /// <summary>
+        /// Endpoint de Cadastro
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult Cadastrar(Clinica clinica)
+        {
+            try
+            {
+                _clinicaRepository.Cadastar(clinica);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
+        /// <summary>
+        /// Endpoint de Listar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+  
         [HttpGet]
         public IActionResult Get ()
         {
@@ -31,6 +58,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Endpoint de Listar por Id
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
 
         public IActionResult GetId (Guid id)
@@ -46,6 +79,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de deletar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Deletar(Guid id)
         {
@@ -60,20 +98,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult Cadastrar (Clinica clinica)
-        {
-            try
-            {
-                _clinicaRepository.Cadastar(clinica);
-                return StatusCode(201);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
 
+        /// <summary>
+        /// Endpoint de Atualizar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Clinica clinica)
         {

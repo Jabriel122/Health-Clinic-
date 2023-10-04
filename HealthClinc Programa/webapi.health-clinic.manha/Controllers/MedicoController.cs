@@ -19,6 +19,11 @@ namespace webapi.health_clinic.manha.Controllers
             _medicoRepository = new MedicoRepository();
         }
 
+        /// <summary>
+        /// Endpoint de Cadastro
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
 
         public IActionResult Post(Medico medico)
@@ -37,6 +42,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Listar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get ()
         {
@@ -50,6 +60,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
            
         }
+
+        /// <summary>
+        /// Endpoint de Listar por id
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
 
         public IActionResult GetId(Guid id)
@@ -65,6 +81,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Atualizar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(Medico medico, Guid id)
         {

@@ -18,6 +18,11 @@ namespace webapi.health_clinic.manha.Controllers
             _especialidadeRepository= new EspecialidadeRepository();
         }
 
+        /// <summary>
+        /// Endpoint de Cadastro
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(Especialidades especialidades)
         {
@@ -32,6 +37,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Listar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+
         [HttpGet]
         public IActionResult Get() 
         {
@@ -45,6 +56,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Endpoint de Deletar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpDelete]
 
         public IActionResult Delete(Guid id) 

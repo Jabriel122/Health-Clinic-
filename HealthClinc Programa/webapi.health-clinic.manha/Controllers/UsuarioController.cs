@@ -18,8 +18,13 @@ namespace webapi.health_clinic.manha.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint de Cadastro
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
-
+       
         public IActionResult Post(Usuario usuario)
         {
             try
@@ -33,8 +38,13 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
-
+        
         public IActionResult Deletar(Guid id)
         {
             try
@@ -48,6 +58,10 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Listar
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get ()
         {
@@ -61,6 +75,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Atualizar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPut]
 
         public IActionResult Put(Usuario usuario, Guid id) 

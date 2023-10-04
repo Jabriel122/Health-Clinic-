@@ -20,6 +20,11 @@ namespace webapi.health_clinic.manha.Controllers
             _consultaRepository = new ConsultaRepository();
         }
 
+        /// <summary>
+        /// Endpoint de Cadastro
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(Consulta consulta)
         {
@@ -34,6 +39,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Listar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -47,6 +58,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Deletar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {
@@ -61,6 +77,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Atualizar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(Consulta consulta,Guid id)
         {
@@ -75,6 +96,12 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Endpoint de Listar por Id de Medico
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpGet("Medico")]
 
         public IActionResult GetIdMEdico(Guid id)
@@ -90,6 +117,11 @@ namespace webapi.health_clinic.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint de Listar por Id de Paciente
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpGet("Paciente")]
 
         public IActionResult GetPaciente(Guid id)
