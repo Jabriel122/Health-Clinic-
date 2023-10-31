@@ -1,0 +1,74 @@
+--DDL Database Definition Language
+
+CREATE DATABASE HealthClinic_Gabriel
+
+USE HealthClinic_Gabriel
+
+CREATE TABLE TipoDeUsuario
+(
+	IdTipoDeUsuario INT PRIMARY KEY IDENTITY,
+	TituloTipoUsuario VARCHAR(15) NOT NULL UNIQUE
+);
+
+CREATE TABLE Usuario
+(
+	IdUsuario INT PRIMARY KEY IDENTITY,
+	IdTipoDeUsuario INT FOREIGN KEY REFERENCES TipoDeUsuario(IdTipoDeUsuario) NOT NULL,
+	Email VARCHAR(100) NOT NULL UNIQUE,
+	Senha VARCHAR(100) NOT NULL,
+	Nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Clinica
+(
+	IdClinica INT PRIMARY KEY IDENTITY,
+	NomeFantasia VARCHAR(100) NOT NULL,
+	Endereco VARCHAR(100) NOT NULL,
+	RazaoSocial VARCHAR(100) NOT NULL,
+	HorarioAbertura TIME NOT NULL,
+	HorarioFechamento TIME NOT NULL,
+	CNPJ VARCHAR(14) NOT NULL
+);
+
+CREATE TABLE Especialidade
+(
+	IdEspecialidade INT PRIMARY KEY IDENTITY ,
+	NomeEspecialidade VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Medico
+(
+	IdMedico INT PRIMARY KEY IDENTITY,
+	IdEspecialidade INT FOREIGN KEY REFERENCES Especialidade(IdEspecialidade) NOT NULL,
+	IdClinica INT FOREIGN KEY REFERENCES Clinica(IdClinica) NOT NULL,
+	IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario) NOT NULL,
+	CRM VARCHAR(8) NOT NULL UNIQUE,
+);
+
+CREATE TABLE Paciente
+(
+	IdPaciente INT PRIMARY KEY IDENTITY,
+	IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario) NOT NULL,
+	DataNascimento DATE NOT NULL,
+	Sexo VARCHAR(20) NOT NULL,
+	CPF VARCHAR(11) NOT NULL UNIQUE,
+);
+
+CREATE TABLE Consulta
+(
+	IdConsulta INT PRIMARY KEY IDENTITY,
+	IdMedico INT FOREIGN KEY REFERENCES Medico(IdMedico) NOT NULL,
+	IdPaciente INT FOREIGN KEY REFERENCES Paciente(IdPaciente) NOT NULL,
+	DataConsulta DATE NOT NULL,
+	HorarioConsulta TIME NOT NULL,
+	Descricao VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE ComentarioConsulta
+(
+	IdComentarioConsulta INT PRIMARY KEY IDENTITY,
+	IdConsulta INT FOREIGN KEY REFERENCES Consulta(IdConsulta) NOT NULL,
+	Comentario VARCHAR(300) NOT NULL,
+	Situacao BIT DEFAULT(0)
+);
+
